@@ -1,9 +1,9 @@
 package ru.netology.selenide;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -15,8 +15,9 @@ import static com.codeborne.selenide.Selenide.open;
 public class CardDeliveryTest {
 
     @BeforeEach
-    public void setupTest() {
+    void setUp() {
         open("http://localhost:9999");
+
     }
 
     private String dateGeneration(int addedDays) {
